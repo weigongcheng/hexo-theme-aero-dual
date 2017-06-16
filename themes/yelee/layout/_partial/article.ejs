@@ -4,14 +4,7 @@
       <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
     </div>
 	
-	{% if theme.leancloud_visitors.enable %}
-            &nbsp; | &nbsp;<span style="text-shadow: 1px 1px 1px rgba(139, 195, 74, 0);" >热度</span>&nbsp;<span style="color:#E91E63;" id="{{ url_for(post.path) }}"class="leancloud_visitors"  data-flag-title="{{ post.title }}"></span><span style="color:#E91E63;">&nbsp;℃</span>
-            
-            <!-- <span id="{{ url_for(post.path) }}"class="leancloud_visitors"  data-flag-title="{{ post.title }}">
-              &nbsp; | &nbsp;{{__('post.visitors')}}&nbsp;
-               </span> -->
-            
-      {% endif %}
+	
 	  
   <%}%>
   <div class="article-inner">
