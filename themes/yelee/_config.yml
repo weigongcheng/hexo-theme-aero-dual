@@ -7,11 +7,11 @@ Yelee: "3.5"
 ## About Page: `hexo new page about`
 ## Tags Cloud Page: `hexo new page tags`
 menu:
-  主页-韦: /
-  所有文章-韦: /archives/
+  主页: /
+  所有文章: https://weigongcheng.github.io/archives/
   #随笔: /tags/随笔
-  标签云-韦: /tags/
-  关于&留言-韦: /about/
+  标签云: https://weigongcheng.github.io/tags/
+  #关于&留言: https://weigongcheng.github.io/about/
 
 
 # Link to your avatar | 填写头像地址
@@ -44,8 +44,8 @@ subnav:
   GitHub: "https://github.com/weigongcheng"
   #简书: "http://www.jianshu.com/users/94077fcddfc0/latest_articles"
   #新浪微博: "http://weibo.com/poetries1"
-  Email: "mailto:p@poetries.top"
-  #RSS: "/atom.xml"
+  Email: "mailto:496978380@qq.com"
+  RSS: "/atom.xml"
   #V2EX: "#"
   #知乎: "zhihu"
   #豆瓣: "douban"
@@ -184,30 +184,15 @@ tagcloud: true
 friends:
   前端搜索: http://jsdig.com/
   css检索: http://cssvalues.com/
-  醉牛前端: http://f2er.club/
-  前端网址: http://caibaojian.com/links
-  前端导航: http://jsdig.com/
-  前端css88: http://www.css88.com/nav/
   程序资料: http://codecloud.net/
   FED社区: http://frontenddev.org/
   构建工具: https://www.awesomes.cn/
   OverAPI: http://overapi.com/
   DevDocs: http://devdocs.io/
-  CSS词汇: http://yisibl.github.io/css-vocabulary/
-  JS花园: http://www.jb51.net/onlineread/JavaScript-Garden-CN/#intro
-  工具索引: http://tool.oschina.net/
-  设计导航: http://hao.shejidaren.com/
-  设计相关: http://admire.so/
-  用户体验: http://www.uedh.cn/
-  JSbin: http://jsbin.com/
-  Codepen: http://codepen.io/pen
-  RunJs: http://runjs.cn/
-  GitBox: https://app.gistboxapp.com/
-  ToolBox: http://tool.lu/
 #friends: false
 
 #是否开启“关于我”。
-aboutme: 专注于前端
+aboutme: 专注于安卓开发
 #aboutme: false
 
 # Open link in a new tab | 是否在新窗口打开链接
