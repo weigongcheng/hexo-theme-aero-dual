@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-author: John Doe
-language:
-timezone:
+title: weigongcheng's Blog
+subtitle: Choose a gesture to allow yourself to live irreplaceable.
+description: 执于一种追求
+author: Poetry
+language: zh-Hans
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://weigongcheng.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -44,7 +44,7 @@ highlight:
   tab_replace:
 
 # Category & Tag
-default_category: uncategorized
+default_category: default
 category_map:
 tag_map:
 
@@ -63,11 +63,44 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: aero
+theme: fexo
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:weigongcheng/weigongcheng.github.io.git
+  repository: https://git.coding.net/poetry/poetry.git
   branch: master
+
+
+
+  
+# Extensions
+## Plugins: https://hexo.io/plugins/
+plugins:
+    hexo-generator-feed
+    hexo-generator-search
+
+# 站内搜索打开
+search:
+  path: search.xml
+  field: post
+  
+avatar: /images/avatar.jpg
+
+
+# baidu_analytics: 
+
+# JiaThis 分享服务
+jiathis: true
+
+# 百度分享服务
+baidushare: false
+
+# Swiftype Search Keyswiftype_key:
+# swiftype_key: 
+
+# 站点起始时间
+since: 2017
+
+
