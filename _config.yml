@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: weigongcheng's Blog
-subtitle: Choose a gesture to allow yourself to live irreplaceable.
-description: 执于一种追求
-author: weigongcheng
-language: zh-Hans
-timezone: Asia/Shanghai
+title: 幻化万千戏红尘
+subtitle:
+description:
+author: 韦功成
+language:
+timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://weigongcheng.github.io
+url: http://yoursite.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -44,7 +44,7 @@ highlight:
   tab_replace:
 
 # Category & Tag
-default_category: default
+default_category: uncategorized
 category_map:
 tag_map:
 
@@ -69,38 +69,5 @@ theme: yelee
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/weigongcheng/weigongcheng.github.io.git
+  repository: git@github.com:weigongcheng/weigongcheng.github.io.git
   branch: master
-
-
-
-  
-# Extensions
-## Plugins: https://hexo.io/plugins/
-plugins:
-    hexo-generator-feed
-    hexo-generator-search
-
-# 站内搜索打开
-search:
-  path: search.xml
-  field: post
-  
-avatar: /images/avatar.jpg
-
-
-# baidu_analytics: 
-
-# JiaThis 分享服务
-jiathis: true
-
-# 百度分享服务
-baidushare: false
-
-# Swiftype Search Keyswiftype_key:
-# swiftype_key: 
-
-# 站点起始时间
-since: 2017
-
-

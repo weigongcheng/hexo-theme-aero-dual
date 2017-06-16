@@ -7,15 +7,15 @@ Yelee: "3.5"
 ## About Page: `hexo new page about`
 ## Tags Cloud Page: `hexo new page tags`
 menu:
-  主页: /
-  所有文章: /archives/
+  主页-韦: /
+  所有文章-韦: /archives/
   #随笔: /tags/随笔
-  标签云: /tags/
-  关于&留言: /about/
+  标签云-韦: /tags/
+  关于&留言-韦: /about/
 
 
 # Link to your avatar | 填写头像地址
-avatar: /img/avatar.jpg
+avatar: /img/avatar.png
 
 # Small icon of Your site | 站点小图标地址
 favicon: /favicon.png
