@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="韦功成" />
+
+
+
+<meta name="description" content="一、 _config.yml配置">
+<meta name="keywords" content="Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一键更新Hexo到github和coding">
+<meta property="og:url" content="http://yoursite.com/2016/07/02/一键更新Hexo到github和coding/index.html">
+<meta property="og:site_name" content="幻化万千戏红尘">
+<meta property="og:description" content="一、 _config.yml配置">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1637925-3cbdade49c4ed7ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1637925-e9759ccb34032256.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1637925-665ded40c0fb65bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1637925-dbe1323655714ed7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1637925-50b39c29a8ef1785.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1637925-3e1794da1fa2c9c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-06-16T07:44:34.078Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="一键更新Hexo到github和coding">
+<meta name="twitter:description" content="一、 _config.yml配置">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1637925-3cbdade49c4ed7ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="幻化万千戏红尘" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>一键更新Hexo到github和coding | 幻化万千戏红尘</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?40b1f89aa80f2527b3db779c6898c879";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">韦功成</a></h1>
+        </hgroup>
+
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="true" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="https://weigongcheng.github.io/archives/">所有文章</a></li>
+                        
+                            <li><a href="https://weigongcheng.github.io/tags/">标签云</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa GitHub" href="https://github.com/weigongcheng" title="GitHub"></a>
+                            
+                                <a class="fa Email" href="mailto:496978380@qq.com" title="Email"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tools/">Tools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计/">设计</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://jsdig.com/">前端搜索</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://cssvalues.com/">css检索</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://codecloud.net/">程序资料</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://frontenddev.org/">FED社区</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://www.awesomes.cn/">构建工具</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://overapi.com/">OverAPI</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://devdocs.io/">DevDocs</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于安卓开发</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">韦功成</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">韦功成</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="https://weigongcheng.github.io/archives/">所有文章</a></li>
+                
+                    <li><a href="https://weigongcheng.github.io/tags/">标签云</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/weigongcheng" title="GitHub"></a>
+                            
+                                <a class="fa Email" target="_blank" href="mailto:496978380@qq.com" title="Email"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-一键更新Hexo到github和coding" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/02/一键更新Hexo到github和coding/" class="article-date">
+      <time datetime="2016-07-02T20:48:22.000Z" itemprop="datePublished">2016-07-02</time>
+</a>
+
+
+    </div>
+	
+	
+	  
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      一键更新Hexo到github和coding
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="一、-config-yml配置"><a href="#一、-config-yml配置" class="headerlink" title="一、 _config.yml配置"></a><strong>一、 _config.yml配置</strong></h3><a id="more"></a>
+<p>想要同时部署到2个平台，就要修改博客根目录下面的<code>_config.yml</code>文件中的deploy如下<br>根据Hexo官方文档需要修改成下面的形式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  message: [message]</div><div class="line">  repo:</div><div class="line">    github: &lt;repository url&gt;,[branch]</div><div class="line">    gitcafe: &lt;repository url&gt;,[branch]</div></pre></td></tr></table></figure>
+<p>我的配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: # 同时部署到github和coding</div><div class="line">    github: https://github.com/poetries/poetries.github.io.git,master</div><div class="line">    coding: git@git.coding.net:poetry/poetry.git,master</div></pre></td></tr></table></figure>
+<p>提交采用的SSH密钥，这个方法有个好处，提交的时候不用输入用户名和密码</p>
+<hr>
+<h3 id="二、coding上创建一个新项目"><a href="#二、coding上创建一个新项目" class="headerlink" title="二、coding上创建一个新项目"></a><strong>二、coding上创建一个新项目</strong></h3><p>创建后进入项目的代码模块，获取到这个项目的ssh地址</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1637925-3cbdade49c4ed7ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="此处输入图片的描述"></p>
+<hr>
+<h3 id="三、同步本地hexo到coding上"><a href="#三、同步本地hexo到coding上" class="headerlink" title="三、同步本地hexo到coding上"></a><strong>三、同步本地hexo到coding上</strong></h3><p>把获取到了ssh配置在上面的_config.yml文件中的deploy下，如果是第一次使用coding的话，需要设置SSH公钥，生成的方法可以参考<a href="https://coding.net/help/doc/git/ssh-key.html" target="_blank" rel="external">coding帮助中心</a></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1637925-e9759ccb34032256.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="此处输入图片的描述"></p>
+<p>本地打开 id_rsa.pub 文件，复制其中全部内容，填写到SSH_RSA公钥key下的一栏，公钥名称可以随意起名字。完成后点击“添加”，然后输入密码或动态码即可添加完成</p>
+<hr>
+<p>添加后，在<code>git bash</code>命令输入：</p>
+<p><code>ssh -T git@git.coding.net</code></p>
+<p>如果得到下面提示就表示公钥添加成功了：</p>
+<p><code>Coding.net Tips : [Hello ! You&#39;ve conected to Coding.net by SSH successfully! ]</code></p>
+<p>最后使用部署命令就能把博客同步到coding上面：</p>
+<p><code>hexo deploy -g</code></p>
+<hr>
+<h3 id="四、pages服务方式部署"><a href="#四、pages服务方式部署" class="headerlink" title="四、pages服务方式部署"></a><strong>四、pages服务方式部署</strong></h3><p>部署博客方式有两种，第一种就是pages服务的方式，也推荐这种方式，因为可以绑定域名，而第二种演示的方式必须升级会员才能绑定自定义域名。pages方式也很简单<br>就是在<code>source/</code>需要创建一个空白文件，至于原因，是因为 coding.net需要这个文件来作为以静态文件部署的标志。就是说看到这个<code>Staticfile</code>就知道按照静态文件来发布</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd source/</div><div class="line">touch Staticfile  #名字必须是Staticfile</div></pre></td></tr></table></figure>
+<p>分支选择master，因为前面配置的分支是<code>master</code>,因此开启之后，也需要是master。然后看起之后就可访问了。</p>
+<p><strong>注意：</strong></p>
+<p>如果你的项目名称跟你coding的用户名一样，比如我的用户是叫tengj,博客项目名也叫tengj<br>那直接访问 poetry.coding.me就能访问博客，否则就要带上项目名：poetry.coding.me/项目名 才能访问<br>推荐项目名跟用户名一样，这样就可以省略项目名了</p>
+<hr>
+<h3 id="五、演示方式部署"><a href="#五、演示方式部署" class="headerlink" title="五、演示方式部署"></a><strong>五、演示方式部署</strong></h3><p>当你把你的静态网站上传到Coding之后，就可以着手部署演示了，Coding的演示平台支持静态网页，所以其实非常简单。在开启演示模式之前，会提醒你没有检测到环境，你直接强制开启就可以了。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1637925-665ded40c0fb65bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="此处输入图片的描述"></p>
+<ul>
+<li>部署版本我没有填，默认是<code>master</code></li>
+<li>运行环境一定要选择<code>HTML</code></li>
+<li>自动部署要勾上，为后面配置自动部署做准备</li>
+<li>访问域名根据你自己喜爱填写，填好要点急后面的确认按钮</li>
+<li>应用内存也根据自己喜好填写，填好要点急后面的确认按钮</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1637925-dbe1323655714ed7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="此处输入图片的描述"></p>
+<p>以上都配置好了，就可以按下一键部署的按钮了，部署成功后输入地址：poetry.coding.io就能访问</p>
+<hr>
+<h3 id="六、设置自动部署"><a href="#六、设置自动部署" class="headerlink" title="六、设置自动部署"></a><strong>六、设置自动部署</strong></h3><p>如果你是演示方式的话，就需要设置自动部署，这样才能同步新发布的文章</p>
+<p><strong>要配置WebHook才行</strong></p>
+<ul>
+<li>找到项目设置那边的<code>WebHook</code>,然后点击新建 <code>Hook</code></li>
+<li>第一个输入框中是填你的博客域名，然后在后面加上 <code>/_</code></li>
+<li>第二个输入框是输入一个 <code>token</code> ，我们直接填写 <code></code>就可以了,TOKEN两边的大括号见的空格记得去掉</li>
+<li>回到演示里，在左边的栏目中找到环境变量,变量名填写为 <code>WEBHOOK_TOKEN</code> ，值为 <code></code> ，接着重新启动应用就 ok 了！</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1637925-50b39c29a8ef1785.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="此处输入图片的描述"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1637925-3e1794da1fa2c9c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="此处输入图片的描述"></p>
+
+      
+    </div>
+	
+	
+	<style>
+	.donate_bar {
+	text-align: center;
+	margin-top: 5%
+}
+
+.donate_bar a.btn_donate {
+	display: inline-block;
+	width: 82px;
+	height: 82px;
+	margin-left: auto;
+	margin-right: auto;
+	background: url(http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif)no-repeat;
+	-webkit-transition: background 0s;
+	-moz-transition: background 0s;
+	-o-transition: background 0s;
+	-ms-transition: background 0s;
+	transition: background 0s
+}
+
+.donate_bar a.btn_donate:hover {
+	background-position: 0 -82px
+}
+
+.donate_bar .donate_txt {
+	display: block;
+	color: #9d9d9d;
+	font: 14px/2 "Microsoft Yahei"
+}
+.donate_bar.hidden{
+	display: none
+}
+
+.post-donate{
+	margin-top: 80px;
+}
+
+#donate_guide{
+	height: 210px;
+	width: 420px;
+	margin: 0 auto;
+}
+
+#donate_guide img{
+	height: 200px;
+	height: 200px;
+}
+</style>
+
+<! -- 添加捐赠图标 -->
+<div class ="post-donate">
+    <div id="donate_board" class="donate_bar center">
+        <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏"></a>
+        <br>
+      </div>  
+	<div id="donate_guide" class="donate_bar center hidden" >
+		<!-- 支付宝打赏图案 -->
+		<img src="http://7xq6al.com1.z0.glb.clouddn.com/alipay2.jpg" alt="alipay"> 
+		<!-- 微信打赏图案 -->
+		<img src="http://7xq6al.com1.z0.glb.clouddn.com/weixin.jpg" alt="weixin">  
+    </div>
+	<script type="text/javascript">
+		document.getElementById('btn_donate').onclick = function(){
+			$('#donate_board').addClass('hidden');
+			$('#donate_guide').removeClass('hidden');
+		}
+	</script>
+</div>
+<! -- 添加捐赠图标 -->
+	
+
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/07/02/一键更新Hexo到github和coding/">一键更新Hexo到github和coding</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">韦功成</a></p>
+        <p><span>发布时间:</span>2016-07-02, 20:48:22</p>
+        <p><span>最后更新:</span>2017-06-16, 07:44:34</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/07/02/一键更新Hexo到github和coding/" title="一键更新Hexo到github和coding">http://yoursite.com/2016/07/02/一键更新Hexo到github和coding/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/07/02/一键更新Hexo到github和coding/　　作者: 韦功成" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/06/16/应用主题色扩展到通知栏和不包括通知栏的代码设置/">
+                    应用主题色扩展到通知栏和不包括通知栏的代码设置
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/03/15/追求高效工作之路/">
+                    追求高效工作之路
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、-config-yml配置"><span class="toc-number">1.</span> <span class="toc-text">一、 _config.yml配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、coding上创建一个新项目"><span class="toc-number">2.</span> <span class="toc-text">二、coding上创建一个新项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、同步本地hexo到coding上"><span class="toc-number">3.</span> <span class="toc-text">三、同步本地hexo到coding上</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、pages服务方式部署"><span class="toc-number">4.</span> <span class="toc-text">四、pages服务方式部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五、演示方式部署"><span class="toc-number">5.</span> <span class="toc-text">五、演示方式部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六、设置自动部署"><span class="toc-number">6.</span> <span class="toc-text">六、设置自动部署</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-6 i,
+        .toc-level-6 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"true"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"一键更新Hexo到github和coding　| 幻化万千戏红尘　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/06/16/应用主题色扩展到通知栏和不包括通知栏的代码设置/" title="上一篇: 应用主题色扩展到通知栏和不包括通知栏的代码设置">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/03/15/追求高效工作之路/" title="下一篇: 追求高效工作之路">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/06/16/应用主题色扩展到通知栏和不包括通知栏的代码设置/">应用主题色扩展到通知栏和不包括通知栏的代码设置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/02/一键更新Hexo到github和coding/">一键更新Hexo到github和coding</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/15/追求高效工作之路/">追求高效工作之路</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+
+
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2017 韦功成
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+		<div class="visit">
+			<script language="javascript" type="text/javascript" src="http://quote.51.la/?id=18982958&amp;mb=3"></script>
+		</div>
+		
+    </div>
+</footer>
+    </div>
+    
+    <script src="/js/GithubRepoWidget.js"></script>
+
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+             github: ".github-widget a", 
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
